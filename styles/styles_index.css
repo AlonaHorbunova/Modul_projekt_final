@@ -102,7 +102,7 @@ main {
   margin: 0 auto;
   padding-top: 42px;
   position: relative;
-}
+} /*===================section_intro=====================*/
 
 .join_meetup_button {
   background-color: #007f8b;
@@ -152,6 +152,50 @@ main {
   max-width: 100%;
   height: auto;
   display: block;
+}
+/*===================section-2-events-near=====================*/
+.section-2-events-near {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-section2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cards-events-near {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
 }
 
 /*=======================================footer=================================*/
