@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-/*===========header=================================*/
+/*==========================header=================================*/
 header {
   display: flex;
   align-items: center;
@@ -178,7 +178,10 @@ main {
 }
 .section-2-title,
 .section-3-title,
-.section-5-title {
+.section-5-title,
+.section-6-title,
+.section-7-title,
+.section-8-title {
   font-size: 28px;
   font-weight: 600;
 }
@@ -290,10 +293,75 @@ main {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
-.header-section5 {
+/*===================section-5-top-categories=====================*/
+.header-section5,
+.header-section6,
+.header-section7,
+.header-section8 {
   margin-top: 64px;
 }
+.categories-cards {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+}
+.icon-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 22px 28px 16px 28px;
+  max-width: 146px;
+  border-radius: 8px;
+  background: rgba(151, 202, 209, 0.08);
+}
+.icon-category p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(33, 33, 33, 1);
+  /*===================section-6-popular-cities=====================*/
+}
+/*===================section-6-popular-cities=====================*/
+.text-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #707070;
+  line-height: 24px;
+  padding-top: 16px;
+  padding-bottom: 28px;
+}
+.circle-city-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 41px;
+}
+.card-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* центрирует по горизонтали */
+  text-align: center; /* дополнительно выравнивает текст */
+}
+.card-circle p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #212121;
+  padding-top: 24px;
+  word-spacing: 5px;
+}
+/*===================section-7-how-works=====================*/
+.how-works-conteiners {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.blue-conteiner {
+  background-color: #97cad114;
+  margin-top: 24px;
+}
+/*===================section-8-friendships-are-made=====================*/
 
 /*=======================================footer=================================*/
 /*footer {
