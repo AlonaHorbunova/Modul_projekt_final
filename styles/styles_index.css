@@ -120,11 +120,13 @@ main {
   justify-content: space-between;
   max-width: 1196px;
   margin: 0 auto;
-  padding-bottom: 24px;
+  padding-bottom: 12px;
   gap: 40px;
+  min-height: 461px; /* не даст сжаться ниже */
 }
 
-.intro_left {
+.intro_left,
+.Join-Meetup_left {
   flex: 1;
 }
 .intro_left h1 {
@@ -134,7 +136,8 @@ main {
   margin-bottom: 16px;
   line-height: 52px;
 }
-.intro_left p {
+.intro_left p,
+.Join-Meetup_left p {
   font-size: 16px;
   font-weight: 400;
   color: #212121;
@@ -154,31 +157,82 @@ main {
   display: block;
 }
 /*===================section-2-events-near=====================*/
-.section-2-events-near {
-  padding: 20px;
-  max-width: 1200px;
+.section-2-events-near,
+.section-3-events-online,
+.section-5-top-categories {
+  max-width: 1196px;
   margin: 0 auto;
+  padding-top: 12px;
 }
 
-.header-section2 {
+.header-section2,
+.header-section3,
+.header-section5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+}
+.header-section3 {
+  padding-top: 40px;
+}
+.section-2-title,
+.section-3-title,
+.section-5-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+.header-section2-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+}
+.btn-mountain-view {
+  background-color: #97cad11f;
+  padding-top: 11px;
+  padding-bottom: 8px;
+  font-size: 20px;
+  width: auto;
+  max-width: 300px;
+  color: #00798a;
+  font-weight: 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 12px; /* Добавьте это */
+  padding-right: 12px; /* Добавьте это */
+}
+.btn-see-all-events {
+  color: #00798a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-.cards-events-near {
+.cards-events-near,
+.cards-events-online {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 36px;
 }
 
 .card {
   background-color: #f9f9f9;
-  padding: 10px;
+  padding: 0px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 272px;
+  min-height: 399px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .card img {
@@ -196,6 +250,49 @@ main {
   font-size: 14px;
   color: #777;
   margin: 0;
+}
+/*===================section-4-Join-Meetup=====================*/
+.section-4-Join-Meetup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1196px;
+  margin-top: 40px;
+  gap: 40px;
+  background-color: #97cad114;
+  border-radius: 8px;
+  min-height: 236px; /* не даст сжаться ниже */
+}
+.Join-Meetup_left h2 {
+  color: #212121;
+  font-size: 28px;
+  font-weight: 600;
+  padding-left: 56px;
+  padding-top: 36px;
+  padding-bottom: 16px;
+}
+.Join-Meetup_left p {
+  padding-left: 56px;
+}
+.sign-up-button {
+  background-color: #e32359;
+  color: white;
+  border: none;
+  padding: 8px 66px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 56px;
+}
+.hands-img {
+  padding-right: 56px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header-section5 {
+  margin-top: 64px;
 }
 
 /*=======================================footer=================================*/
