@@ -13,15 +13,9 @@
   <body>
     <header>
       <div class="left-group">
-        <div class="logo_header">
-          <a href="index.html">
-            <img
-              src="/media/img/Link-meetup-logo.png"
-              class="logo"
-              alt="logo"
-            />
-          </a>
-        </div>
+        <a href="index.html">
+          <img src="/media/LOGO.png" class="logo" alt="logo" />
+        </a>
         <form class="search-wrapper">
           <input
             type="text"
@@ -55,14 +49,153 @@
 
     <main>
       <section class="Events-near-New-York">
-        <div class="Events_left"></div>
+          <div class="Events-title">
+         <h1>Events near New York, NY</h1>
+         </div>
+         
+         <a href="#" class="btn-events">Events</a>
+         
+<div class="btns-filter">
+           
+            <div class="filter-section">
+              <select id="type-filter">
+                <option value="all">All types</option>
+                <option value="meetup">Meetup</option>
+                <option value="concert">Concert</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+         
 
-        <div class="Events_right"></div>
+
+            <div class="filter-section">
+              <select id="distance-filter">
+                <option value="all">Any distance</option>
+                <option value="5">5 miles</option>
+                <option value="10">10 miles</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+
+
+          <div class="filter-section">
+              <select id="category-filter">
+                <option value="all">Any category</option>
+                <option value="tech">Tech</option>
+                <option value="music">Music</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+          </div>
+</div>
+
+          <div class="events-container">
+            <div
+              class="event"
+              data-type="meetup"
+              data-distance="5"
+              data-category="tech"
+            >
+              <h3>Tech Meetup</h3>
+              <p>Date: March 13, 2023</p>
+              <p>Distance: 5 miles</p>
+            </div>
+            <div
+              class="event"
+              data-type="concert"
+              data-distance="10"
+              data-category="music"
+            >
+              <h3>Music Concert</h3>
+              <p>Date: March 14, 2023</p>
+              <p>Distance: 10 miles</p>
+            </div>
+            <!-- Add more events as needed -->
+          </div>
+        </div>
+
+        <div class="Events_right">
+<div id="map" style="width: 100%; height: 400px;"></div>
+
       </section>
     </main>
 
-    <footer>
-      <div class="footer-container"></div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <p>Create your own Meetup group.</p>
+          <button class="btn-get-started">Get Started</button>
+        </div>
+
+        <hr />
+
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h4>Your Account</h4>
+            <ul>
+              <li><a href="#">Sign up</a></li>
+              <li><a href="#">Log in</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Become an Affiliate</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Discover</h4>
+            <ul>
+              <li><a href="#">Groups</a></li>
+              <li><a href="#">Calendar</a></li>
+              <li><a href="#">Topics</a></li>
+              <li><a href="#">Cities</a></li>
+              <li><a href="#">Online Events</a></li>
+              <li><a href="#">Local Guides</a></li>
+              <li><a href="#">Make Friends</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Meetup</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Meetup Pro</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Apps</a></li>
+              <li><a href="#">Podcast</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <div class="icon_p">
+            <p>Follow us</p>
+            <div class="icons">
+              <img src="media/icons/footer/Facebook.png" alt="Facebook" />
+              <img src="media/icons/footer/Twitter.png" alt="Twitter" />
+              <img src="media/icons/footer/YouTube.png" alt="YouTube" />
+              <img src="media/icons/footer/Instagram.png" alt="Instagram" />
+              <img src="media/icons/footer/Tik-Tok.png" alt="TikTok" />
+            </div>
+          </div>
+          <div class="app-links">
+            <img src="media/icons/footer/google-play.png" alt="Google Play" />
+            <img src="media/icons/footer/app-store.png" alt="App Store" />
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2024 Meetup</p>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Do Not Sell or Share My Personal Data</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
+    <script src="index.js"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
   </body>
 </html>

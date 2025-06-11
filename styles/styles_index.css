@@ -228,7 +228,6 @@ main {
 
 .card {
   background-color: #f9f9f9;
-  padding: 0px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -238,23 +237,60 @@ main {
   flex-direction: column;
   gap: 10px;
 }
-
 .card img {
   height: auto;
   border-radius: 6px;
-  margin-bottom: 10px;
+  vertical-align: middle;
 }
-
 .card h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0 0 5px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #212121;
+  text-align: left;
 }
-
 .card p {
   font-size: 14px;
   color: #777;
   margin: 0;
+  text-align: left;
 }
+.distance {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.calendar p {
+  color: #212121;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.calendar img {
+  padding-right: 6px;
+}
+.calendar {
+  margin-top: 8px;
+}
+
+.check-and-ticket {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+.check-and-ticket p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212121;
+  padding-right: 5px;
+}
+.check-and-ticket img {
+  padding-right: 2px;
+}
+
 /*===================section-4-Join-Meetup=====================*/
 .section-4-Join-Meetup {
   display: flex;
