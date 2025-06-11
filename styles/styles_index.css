@@ -11,27 +11,24 @@ header {
   justify-content: space-between;
   max-width: 1512px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 16px 24px;
   position: relative;
 }
-.logo {
-  height: 40px;
-}
+
 .left-group {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
 }
 .search-wrapper {
-  position: relative;
   display: flex;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 560px;
-  flex-shrink: 0;
-  flex: 0 1 600px;
+  width: 560px;
+  max-width: 100%;
+  background-color: #fff;
 }
 .search-events,
 .search-location {
@@ -100,9 +97,10 @@ button.language {
 main {
   max-width: 1196px;
   margin: 0 auto;
-  padding-top: 42px;
+  padding-top: 24px;
   position: relative;
-} /*===================section_intro=====================*/
+}
+/*===================section_intro=====================*/
 
 .join_meetup_button {
   background-color: #007f8b;
@@ -122,7 +120,7 @@ main {
   margin: 0 auto;
   padding-bottom: 12px;
   gap: 40px;
-  min-height: 461px; /* не даст сжаться ниже */
+  min-height: 461px;
 }
 
 .intro_left,
@@ -164,13 +162,16 @@ main {
   margin: 0 auto;
   padding-top: 12px;
 }
+.btn-mountain-view {
+  margin-right: 80px;
+}
 
 .header-section2,
 .header-section3,
 .header-section5 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 28px;
 }
 .header-section3 {
@@ -422,12 +423,12 @@ main {
   padding: 40px 24px;
   font-family: sans-serif;
   font-size: 14px;
+  margin-top: 64px;
 }
 
 .footer-container {
   max-width: 1120px;
   margin: 0 auto;
-  /* Добавим паддинги, чтобы на узких экранах контент не прилипал к краям */
   padding: 0 16px;
 }
 
@@ -435,23 +436,29 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 32px; /* убрано max-width */
+  margin-bottom: 32px;
+}
+.footer-top p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #f6f7f8;
 }
 
 .btn-get-started {
   padding: 10px 16px;
   margin-left: 16px;
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   border-radius: 6px;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
 }
 
 hr {
   border: none;
   height: 1px;
-  background-color: #333;
+  background-color: #707070;
   margin-bottom: 32px;
 }
 
@@ -487,28 +494,29 @@ hr {
 }
 
 .footer-social {
-  margin-bottom: 24px; /* убрано max-width */
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.footer-social .icons {
+.icons {
   display: flex;
   gap: 32px;
-  margin-top: 8px;
+  margin-top: 20px;
 }
 
 .footer-bottom {
   border-top: 1px solid #333;
-  padding-top: 24px;
+  padding-top: 32px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  /* убрано max-width */
+  flex-direction: row;
+  gap: 24px;
 }
 
 .footer-bottom ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 24px;
   padding: 0;
   list-style: none;
   margin: 0;
@@ -521,5 +529,10 @@ hr {
 
 .app-links {
   display: flex;
+  align-items: center;
   gap: 12px;
+}
+.app-links img {
+  max-width: 140px;
+  max-height: 40px;
 }
