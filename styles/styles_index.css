@@ -92,65 +92,6 @@ button.language {
   border-radius: 8px;
   cursor: pointer;
 }
-@media (max-width: 900px) {
-  /* Скрываем поле ввода локации */
-  .search-location {
-    display: none;
-  }
-
-  /* Чтобы .search-events занимал всё доступное место */
-  .search-events {
-    border-right: none;
-  }
-}
-
-@media (max-width: 600px) {
-  header {
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  /* Размещаем поисковую строку под хедером */
-  .search-wrapper {
-    position: absolute;
-    top: 80px;
-    width: calc(100% - 48px); /* учёт padding 24px */
-    left: 24px;
-    right: 24px;
-    margin-top: 20px;
-  }
-  .logo {
-    display: none;
-  }
-  .header-right {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-  }
-  .header-right::before {
-    content: url("media/icons/Vector.png");
-  }
-
-  .intro {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 80 0;
-    position: relative;
-  }
-  .intro_left {
-    margin-left: 0;
-    padding: 15px 15px 0 15px;
-    position: relative;
-  }
-  .cyclists-img {
-    position: absolute;
-    left: 5%;
-    bottom: -45%;
-  }
-}
-
 /*=======================================main===================================*/
 
 main {
@@ -209,7 +150,6 @@ main {
 .cyclists-img img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 /*===================section-2-events-near=====================*/
 .section-2-events-near,
@@ -265,8 +205,8 @@ main {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding-left: 12px; /* Добавьте это */
-  padding-right: 12px; /* Добавьте это */
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .btn-see-all-events {
   color: #00798a;
@@ -557,7 +497,7 @@ hr {
   display: flex;
   gap: 260px;
   flex-wrap: wrap;
-  margin-bottom: 32px; /* убрано max-width */
+  margin-bottom: 32px;
 }
 
 .footer-column h4 {
@@ -626,4 +566,151 @@ hr {
 .app-links img {
   max-width: 140px;
   max-height: 40px;
+}
+@media (max-width: 900px) {
+  .intro {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 40px 16px;
+  }
+  .intro_left h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .intro_left p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .intro_right {
+    justify-content: center;
+  }
+
+  .cards-events-near,
+  .cards-events-online {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-middle {
+    gap: 60px;
+  }
+  .search-location {
+    display: none;
+  }
+  .search-events {
+    border-right: none;
+    padding-left: 12px;
+  }
+  .search-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .search-wrapper {
+    position: absolute;
+    top: 70px;
+    width: calc(100% - 48px);
+    left: 24px;
+    right: 24px;
+    margin-top: 0px;
+  }
+
+  .header-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  .header-right::before {
+    content: url("media/icons/Vector.png");
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    position: relative;
+  }
+  .intro_left {
+    margin-left: 0;
+    padding: 15px 15px 0 15px;
+    position: relative;
+  }
+  .intro_left h1 {
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+  .cyclists-img {
+    left: 5%;
+    bottom: -45%;
+  }
+  .header-section2-right,
+  .btn-see-all-events {
+    display: none;
+  }
+  .section-2-title {
+    font-size: 25px;
+    padding-left: 10px;
+  }
+  .section-3-title,
+  .section-5-title,
+  .section-6-title,
+  .section-7-title {
+    padding-left: 50px;
+  }
+  .btn-mountain-view {
+    margin: 0;
+  }
+  .cards-events-near,
+  .cards-events-online,
+  .circle-city-cards,
+  .friendships-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    gap: 5px;
+    place-items: center;
+  }
+  .categories-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 5px;
+    place-items: center;
+  }
+  .section-4-Join-Meetup {
+    display: flex;
+    flex-direction: column;
+  }
+  .Join-Meetup_left h2,
+  .Join-Meetup_left p,
+  .text-subtitle {
+    padding-left: 0;
+    text-align: center;
+  }
+  .sign-up-button {
+    margin-left: 100px;
+  }
+  .hands-img {
+    padding: 0;
+  }
+  .how-works-conteiners {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-middle {
+    gap: 17px;
+    margin-bottom: 32px;
+  }
+  .app-links,
+  .footer-bottom ul {
+    display: none;
+  }
 }
