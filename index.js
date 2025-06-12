@@ -1,44 +1,42 @@
 
-/* function initMap() {
-  var location = { lat: 40.7128, lng: -74.006 };
-  var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: location,
-  });
-  new google.maps.Marker({
-    position: location,
-    map: map,
+// Инициализация карты Leaflet в div с id="map"
+const map = L.map('map').setView([40.7128, -74.0060], 13); // Центр - Нью-Йорк
+
+// Добавляем слой OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+
+
+/* const events = document.querySelectorAll('.event');
+
+const typeFilter = document.getElementById('type-filter');
+const distanceFilter = document.getElementById('distance-filter');
+const categoryFilter = document.getElementById('category-filter');
+
+function filterEvents() {
+  const typeValue = typeFilter.value;
+  const distanceValue = distanceFilter.value;
+  const categoryValue = categoryFilter.value;
+
+  events.forEach(event => {
+    const matchesType = typeValue === 'all' || event.dataset.type === typeValue;
+    const matchesDistance = distanceValue === 'all' || event.dataset.distance === distanceValue;
+    const matchesCategory = categoryValue === 'all' || event.dataset.category === categoryValue;
+
+    if (matchesType && matchesDistance && matchesCategory) {
+      event.parentElement.style.display = ''; // показать событие
+    } else {
+      event.parentElement.style.display = 'none'; // скрыть событие
+    }
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const typeFilter = document.getElementById("type-filter");
-  const distanceFilter = document.getElementById("distance-filter");
-  const categoryFilter = document.getElementById("category-filter");
-  const events = document.querySelectorAll(".event");
+// Слушатели изменения фильтров
+[typeFilter, distanceFilter, categoryFilter].forEach(select =>
+  select.addEventListener('change', filterEvents)
+);
 
-  function filterEvents() {
-    const selectedType = typeFilter.value;
-    const selectedDistance = distanceFilter.value;
-    const selectedCategory = categoryFilter.value;
-
-    events.forEach((event) => {
-      const eventType = event.getAttribute("data-type");
-      const eventDistance = event.getAttribute("data-distance");
-      const eventCategory = event.getAttribute("data-category");
-
-      const typeMatch = selectedType === "all" || eventType === selectedType;
-      const distanceMatch =
-        selectedDistance === "all" || eventDistance === selectedDistance;
-      const categoryMatch =
-        selectedCategory === "all" || eventCategory === selectedCategory;
-
-      event.style.display =
-        typeMatch && distanceMatch && categoryMatch ? "block" : "none";
-    });
-  }
-
-  typeFilter.addEventListener("change", filterEvents);
-  distanceFilter.addEventListener("change", filterEvents);
-  categoryFilter.addEventListener("change", filterEvents);
-});
+// Можно вызвать один раз при загрузке
+filterEvents();

@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sixtyfour&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   </head>
   <body>
     <header>
@@ -49,74 +50,196 @@
 
     <main>
       <section class="Events-near-New-York">
-          <div class="Events-title">
-         <h1>Events near New York, NY</h1>
-         </div>
-         
-         <a href="#" class="btn-events">Events</a>
-         
-<div class="btns-filter">
-           
-            <div class="filter-section">
-              <select id="type-filter">
-                <option value="all">All types</option>
-                <option value="meetup">Meetup</option>
-                <option value="concert">Concert</option>
-                <!-- Add more options as needed -->
-              </select>
-            </div>
-         
+        <div class="Events-title">
+          <h1>Events near New York, NY</h1>
+        </div>
 
+        <a href="#" class="btn-events">Events</a>
 
-            <div class="filter-section">
-              <select id="distance-filter">
-                <option value="all">Any distance</option>
-                <option value="5">5 miles</option>
-                <option value="10">10 miles</option>
-                <!-- Add more options as needed -->
-              </select>
-            </div>
-
-
+        <div class="btns-filter">
           <div class="filter-section">
-              <select id="category-filter">
-                <option value="all">Any category</option>
-                <option value="tech">Tech</option>
-                <option value="music">Music</option>
-                <!-- Add more options as needed -->
-              </select>
-            </div>
+            <select id="type-filter">
+              <option value="all">Any types</option>
+              <option value="meetup">Meetup</option>
+              <option value="concert">Concert</option>
+            </select>
           </div>
-</div>
-
-          <div class="events-container">
-            <div
-              class="event"
-              data-type="meetup"
-              data-distance="5"
-              data-category="tech"
-            >
-              <h3>Tech Meetup</h3>
-              <p>Date: March 13, 2023</p>
-              <p>Distance: 5 miles</p>
-            </div>
-            <div
-              class="event"
-              data-type="concert"
-              data-distance="10"
-              data-category="music"
-            >
-              <h3>Music Concert</h3>
-              <p>Date: March 14, 2023</p>
-              <p>Distance: 10 miles</p>
-            </div>
-            <!-- Add more events as needed -->
+          <div class="filter-section">
+            <select id="distance-filter">
+              <option value="all">Any distance</option>
+              <option value="5">5 miles</option>
+              <option value="10">10 miles</option>
+            </select>
+          </div>
+          <div class="filter-section">
+            <select id="category-filter">
+              <option value="all">Any category</option>
+              <option value="tech">Tech</option>
+              <option value="music">Music</option>
+            </select>
           </div>
         </div>
 
-        <div class="Events_right">
-<div id="map" style="width: 100%; height: 400px;"></div>
+        <div class="events-wrapper">
+          <!-- Левая колонка -->
+          <div class="events-left">
+            <div class="events-container">
+              <hr class="stick" />
 
+              <!-- Событие 1 -->
+              <div class="event-inside">
+                <div
+                  class="event"
+                  data-type="meetup"
+                  data-distance="5"
+                  data-category="tech"
+                >
+                  <div class="event-content">
+                    <img src="media/img/page2/foto1-page2.png" alt="foto" />
+                    <div class="event-text">
+                      <div class="time">
+                        <p>Wed, Mar 13 · 11:30 PM UTC</p>
+                      </div>
+                      <h3>
+                        All Nations - Manhattan Missions Church Bible Study
+                      </h3>
+                      <p>Hobbies and Passions (5 km)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="stick" />
+
+              <!-- Событие 2 -->
+              <div class="event-inside">
+                <div
+                  class="event"
+                  data-type="concert"
+                  data-distance="10"
+                  data-category="music"
+                >
+                  <div class="event-content">
+                    <img src="media/img/page2/foto2-page2.png" alt="foto" />
+                    <div class="event-text">
+                      <div class="time">
+                        <p>Sat, Mar 23 · 3:00 PM UTC</p>
+                      </div>
+                      <h3>INFJ Personality Type - Coffee Shop Meet & Greet</h3>
+                      <p>Hobbies and Passions (25 km)</p>
+                      <p>99 attendees</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="stick" />
+
+              <!-- Событие 3 -->
+              <div class="event-inside">
+                <div
+                  class="event"
+                  data-type="concert"
+                  data-distance="10"
+                  data-category="music"
+                >
+                  <div class="event-content">
+                    <img src="media/img/page2/foto3-page2.png" alt="foto" />
+                    <div class="event-text">
+                      <div class="time">
+                        <p>Wed, Mar 13 · 11:30 PM UTC</p>
+                      </div>
+                      <h3>
+                        NYC AI Users - AI Tech Talks, Demo & Social: RAG Search
+                        and Customer Experience
+                      </h3>
+                      <p>Technology (50 km)</p>
+                      <p>43 attendees</p>
+                      <p>2 spots left</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="stick" />
+
+              <!-- Событие 4 -->
+              <div class="event-inside">
+                <div
+                  class="event"
+                  data-type="concert"
+                  data-distance="10"
+                  data-category="music"
+                >
+                  <div class="event-content">
+                    <img src="media/img/page2/foto4-page2.png" alt="foto" />
+                    <div class="event-text">
+                      <div class="time">
+                        <p>Wed, Mar 13 · 11:30 PM UTC</p>
+                      </div>
+                      <h3>
+                        Book 40+ Appointments Per Month Using AI and Automation
+                      </h3>
+                      <p>Technology</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="stick" />
+
+              <!-- Событие 5 -->
+              <div class="event-inside">
+                <div
+                  class="event"
+                  data-type="concert"
+                  data-distance="10"
+                  data-category="music"
+                >
+                  <div class="event-content">
+                    <img src="media/img/page2/foto5-page2.png" alt="foto" />
+                    <div class="event-text">
+                      <div class="time">
+                        <p>Wed, Mar 13 · 11:00 PM UTC</p>
+                      </div>
+                      <h3>Dump writing group weekly meetup</h3>
+                      <p>Hobbies and Passions</p>
+                      <p>77 attendees</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="stick" />
+
+              <!-- Событие 6 -->
+              <div class="event-inside">
+                <div
+                  class="event"
+                  data-type="concert"
+                  data-distance="10"
+                  data-category="music"
+                >
+                  <div class="event-content">
+                    <img src="media/img/page2/foto6-page2.png" alt="foto" />
+                    <div class="event-text">
+                      <div class="time">
+                        <p>Thu, Mar 14 · 11:00 PM UTC</p>
+                      </div>
+                      <h3>
+                        Over 40s, 50s, & 60s Senior Singles Chat, Meet & Dating
+                        Community
+                      </h3>
+                      <p>Hobbies and Passions</p>
+                      <p>140 attendees</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="stick" />
+            </div>
+          </div>
+
+          <!-- Правая колонка -->
+          <div class="events-right">
+            <div id="map" style="width: 100%; height: 400px"></div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -194,8 +317,6 @@
       </div>
     </footer>
     <script src="index.js"></script>
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-</script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </body>
 </html>
